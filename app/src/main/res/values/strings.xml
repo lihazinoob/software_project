@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Software_Project</string>
+    <string name="splash_screen_logo_text">This is the logo for our app</string>
 </resources>
