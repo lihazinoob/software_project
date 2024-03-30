@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blue">#3023ae</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#00008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="purple">#c86dd7</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Software_Project</string>
+    <string name="splash_screen_logo_text">This is the logo for our app</string>
+    <style name="Base.Theme.Software_Project" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Software_Project" parent="Base.Theme.Software_Project"/>
+</resources>

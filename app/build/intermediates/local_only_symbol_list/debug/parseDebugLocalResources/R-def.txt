@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color blue
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+color purple
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable logo
+drawable logo_invisible
+drawable plus
+drawable splash_screen_background
+drawable userimageupload
+id add_image
+id imageView
+id main
+id outlinedTextFieldemail
+id outlinedTextFieldpassword
+id outlinedTextFieldusername
+id profile_image
+id registration_button
+layout activity_main
+layout activity_registration_page
+layout activity_splash_screen
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string splash_screen_logo_text
+style Base.Theme.Software_Project
+style Theme.Software_Project
+xml backup_rules
+xml data_extraction_rules
