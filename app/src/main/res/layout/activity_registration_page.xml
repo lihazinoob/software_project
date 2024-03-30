@@ -62,8 +62,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldusername"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldusername"
         app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldusername">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -72,6 +72,41 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldpassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldemail"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldemail"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldemail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registration_button"
+        android:layout_width="0dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+
+        android:textSize="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FC46AA"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldpassword"
+        app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldpassword"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldpassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
