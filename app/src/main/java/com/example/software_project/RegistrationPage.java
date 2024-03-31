@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.software_project.databinding.ActivityRegistrationPageBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationPage extends AppCompatActivity {
     private ActivityRegistrationPageBinding binding;
@@ -39,7 +40,22 @@ public class RegistrationPage extends AppCompatActivity {
                     // Register user
                     // Code to register user
                     // Redirect to login page
-                    Toast.makeText(RegistrationPage.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                            binding.emailEditText.getText().toString(),
+                            binding.passwordEditText.getText().toString()
+                    ).addOnCompleteListener(task -> {
+                        if(task.isSuccessful())
+                        {
+                            Toast.makeText(RegistrationPage.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+                            //Intent intent = new Intent(RegistrationPage.this, LoginPage.class);
+                            //startActivity(intent);
+                        }
+                        else
+                        {
+                            Toast.makeText(RegistrationPage.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    //Toast.makeText(RegistrationPage.this, "User registered successfully", Toast.LENGTH_SHORT).show();
 
                 }
             }
