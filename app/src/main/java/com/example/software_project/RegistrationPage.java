@@ -12,11 +12,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.software_project.Models.UserModel;
 import com.example.software_project.databinding.ActivityRegistrationPageBinding;
+import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class RegistrationPage extends AppCompatActivity {
     private ActivityRegistrationPageBinding binding;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +52,17 @@ public class RegistrationPage extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(RegistrationPage.this, "User registered successfully", Toast.LENGTH_SHORT).show();
-                            //Intent intent = new Intent(RegistrationPage.this, LoginPage.class);
-                            //startActivity(intent);
+                            UserModel userModel = new UserModel(binding.usernameEditText.getText().toString(),binding.emailEditText.getText().toString(),binding.passwordEditText.getText().toString());
+                            FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().getUid()).set(userModel).addOnCompleteListener(task1 -> {
+                                if(task1.isSuccessful())
+                                {
+                                    Toast.makeText(RegistrationPage.this, "User data saved to FireStore successfully", Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                {
+                                    Toast.makeText(RegistrationPage.this,task1.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
                         }
                         else
                         {
@@ -56,6 +70,8 @@ public class RegistrationPage extends AppCompatActivity {
                         }
                     });
                     //Toast.makeText(RegistrationPage.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+
+
 
                 }
             }

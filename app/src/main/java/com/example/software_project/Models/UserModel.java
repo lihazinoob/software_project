@@ -1,10 +1,10 @@
 package com.example.software_project.Models;
 
 public class UserModel {
-    private String image = null;
-    private String name = null;
-    private String email = null;
-    private String password = null;
+    public String image = null;
+    public String name ;
+    public String email;
+    public String password;
 
     public UserModel()
     {
