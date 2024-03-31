@@ -1,12 +1,16 @@
 package com.example.software_project;
 
 import android.content.Intent;
+import android.content.pm.LauncherActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import android.window.SplashScreen;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,7 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class RegistrationPage extends AppCompatActivity {
     private ActivityRegistrationPageBinding binding;
-
+    private ActivityResultLauncher<Intent> imageUploadActivityResultLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,21 @@ public class RegistrationPage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         View root = binding.getRoot();
         setContentView(root);
+
+        imageUploadActivityResultLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            Uri imageUri = data.getData();
+                            // Use the imageUri as needed (e.g., display in ImageView)
+                        }
+                    }
+                });
+
+
+
 
         binding.registrationButton.setOnClickListener(new View.OnClickListener() {
             @Override
