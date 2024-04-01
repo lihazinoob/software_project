@@ -45,6 +45,7 @@ public class RegistrationPage extends AppCompatActivity {
                             Uri imageUri = data.getData();
                             // Use the imageUri as needed (e.g., display in ImageView)
                             UserModel.image = String.valueOf(uploadImageToFirebaseStorage(imageUri, "profile_images"));
+                            binding.profileImage.setImageURI(imageUri);
                         }
                     }
                 });
