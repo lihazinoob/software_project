@@ -1,7 +1,7 @@
 package com.example.software_project.Models;
 
 public class UserModel {
-    public String image = null;
+    public static String image = null;
     public String name ;
     public String email;
     public String password;

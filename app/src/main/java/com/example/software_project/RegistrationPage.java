@@ -1,5 +1,7 @@
 package com.example.software_project;
 
+import static com.example.software_project.utils.Utils.uploadImageToFirebaseStorage;
+
 import android.content.Intent;
 import android.content.pm.LauncherActivityInfo;
 import android.net.Uri;
@@ -21,7 +23,7 @@ import com.example.software_project.databinding.ActivityRegistrationPageBinding;
 import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-
+import com.example.software_project.utils.Utils;
 public class RegistrationPage extends AppCompatActivity {
     private ActivityRegistrationPageBinding binding;
     private ActivityResultLauncher<Intent> imageUploadActivityResultLauncher;
@@ -42,6 +44,7 @@ public class RegistrationPage extends AppCompatActivity {
                         if (data != null) {
                             Uri imageUri = data.getData();
                             // Use the imageUri as needed (e.g., display in ImageView)
+                            UserModel.image = String.valueOf(uploadImageToFirebaseStorage(imageUri, "profile_images"));
                         }
                     }
                 });
@@ -96,6 +99,12 @@ public class RegistrationPage extends AppCompatActivity {
             }
         });
 
-
+        binding.addImage.setOnClickListener(
+                v -> {
+                    Intent intent = new Intent(Intent.ACTION_PICK);
+                    intent.setType("image/*");
+                    imageUploadActivityResultLauncher.launch(intent);
+                }
+        );
     }
 }
