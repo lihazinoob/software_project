@@ -108,9 +108,36 @@
         android:layout_marginTop="24dp"
         android:backgroundTint="#FC46AA"
         android:text="Register"
+
         app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldpassword"
         app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldpassword"
         app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldpassword" />
 
+
+    <TextView
+        android:id="@+id/login_text_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:text="Already have an account?"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/registration_button"
+        app:layout_constraintStart_toStartOf="@+id/registration_button"
+        app:layout_constraintTop_toBottomOf="@+id/registration_button" />
+
+    <TextView
+        android:id="@+id/login_page_link_from_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:text="LOGIN"
+        android:textColor="#FC46AA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_text_prompt"
+        app:layout_constraintVertical_bias="0.07999998" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

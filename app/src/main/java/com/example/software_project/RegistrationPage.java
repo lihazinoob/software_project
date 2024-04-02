@@ -107,5 +107,15 @@ public class RegistrationPage extends AppCompatActivity {
                     imageUploadActivityResultLauncher.launch(intent);
                 }
         );
+
+        binding.loginPageLinkFromRegistration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirect to login page
+                Intent intent = new Intent(RegistrationPage.this, login_page.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
