@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-mergeDebugResources-36:\\layout\\activity_registration_page.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-main-39:\\layout\\activity_registration_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-mergeDebugResources-36:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-main-39:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.software_project.app-mergeDebugResources-36:/layout/activity_login_page.xml",
+        "source": "com.example.software_project.app-main-39:/layout/activity_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-mergeDebugResources-36:\\layout\\activity_splash_screen.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-main-39:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-mergeDebugResources-36:\\layout\\activity_login_page.xml",
+        "source": "C:\\Users\\ASUS\\.gradle\\daemon\\8.4\\com.example.software_project.app-main-39:\\layout\\activity_login_page.xml"
+    }
+]
